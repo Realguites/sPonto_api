@@ -28,10 +28,21 @@ classRouter.post('/',login ,async(req, res)=>{
 })
 classRouter.get('/', login, async(req, res)=>{
   try{  
-    //console.log(req.headers);
+
     const repo = getRepository(User);
     const resposta = await repo.find();
     return res.status(200).json(resposta);
+  }catch(err){
+    return res.status(400).json("Erro ao executar " + err);
+  }
+
+})
+
+classRouter.delete('/:id', login, async(req, res)=>{
+  try{  
+    const repo = getRepository(User);
+    const resposta = await repo.delete(req.params.id);
+    return res.status(200).json("Usuário " + req.params.id + " excluído com sucesso!");
   }catch(err){
     return res.status(400).json("Erro ao executar " + err);
   }

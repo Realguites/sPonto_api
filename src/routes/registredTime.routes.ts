@@ -4,7 +4,6 @@ import { RegistredTime } from "../entity/RegistredTime";
 import User from "../entity/User";
 
 const login = require("../middleware/login")
-const usuario = require("../middleware/headers")
 
 const classRouter = Router();
 const bcrypt = require("bcrypt");
