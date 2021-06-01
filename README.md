@@ -27,4 +27,8 @@ routes:
 
 All endpoints are authenticated using JWT. For first use, you can run a migrate insertRootUser, this migrate will add into database
 the ADM user. I suggest to you delete it after insert a new user.
+
+Used technologies:
+
+TypeScript, TypeOrm, JWT, NodeJS, Express, PostgreSql, Gitmoji.
 	
