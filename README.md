@@ -25,8 +25,7 @@ routes:
 /users/:id(DELETE)
 	delete user from database, passing the id as parameter.
 
-All endpoints are authenticated using JWT. For first use, you can run a migrate insertRootUser, this migrate will add into database
-the ADM user. I suggest to you delete it after insert a new user.
+All endpoints are authenticated using JWT. Except to post a new User. This function will need to be thinked about secure.
 
 Used technologies:
 
