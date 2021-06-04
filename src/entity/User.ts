@@ -5,21 +5,21 @@ import { RegistredTime } from "./RegistredTime";
 export default class User {
 
     @PrimaryGeneratedColumn()
-    id: number;
+    public id: number;
 
     @Column()
-    name: string;
+    public name: string;
 
     @Column()
-    email: string;
+    public email: string;
 
     @Column()
-    password: string;
+    public password: string;
 
     @Column()
-    role: string;
+    public role: string;
 
     @OneToMany(type => RegistredTime, user => User)
-    registredTimes: RegistredTime[];
+    public registredTimes: RegistredTime[];
 
 }

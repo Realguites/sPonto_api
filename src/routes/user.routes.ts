@@ -7,7 +7,7 @@ const classRouter = Router();
 const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken');
 
-classRouter.post('/',login ,async(req, res)=>{
+classRouter.post('/' ,async(req, res)=>{
   try{
     const hash = bcrypt.hashSync(req.body.password, 15);
     req.body.password = hash;
