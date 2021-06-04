@@ -6,12 +6,12 @@ import User from "./User";
 export class RegistredTime {
 
     @PrimaryGeneratedColumn()
-    id: number;
+    public id: number;
 
     @Column()
-    time_registred: Date;
+    public time_registred: Date;
 
-    @ManyToOne(type => User, registredTimes => RegistredTime)
-    user: User;
+    @ManyToOne(type => User, registredTimes => RegistredTime , { eager: true })
+    public user: User;
 
 }
